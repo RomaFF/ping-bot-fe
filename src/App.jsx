@@ -43,7 +43,6 @@ function App() {
             const result = await response.json();
             setData(`Sending success: ${JSON.stringify(result)}`);
         } catch (err) {
-            console.error(err);
             setData('Something went wrong: ', JSON.stringify(err));
         }
 
@@ -52,9 +51,14 @@ function App() {
         }, 5000);
     };
 
+    useEffect(() => {
+        if (data) {
+            alert(data)
+        }
+    }, [data]);
+
     return (
       <div className="container">
-          <div>{data}</div>
           <button className="button" onClick={onPing}>
               Ping admin
           </button>
