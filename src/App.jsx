@@ -43,7 +43,7 @@ function App() {
             setData(`Sending success: ${JSON.stringify(result)}`);
         } catch (err) {
             console.error(err);
-            setData('Something went wrong');
+            setData('Something went wrong: ', JSON.stringify(err));
         }
 
         setTimeout(() => {
