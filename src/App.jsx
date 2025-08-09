@@ -20,7 +20,7 @@ function App() {
         }
 
         const payload = {
-            chatId: user.id,
+            chatId: tg.initDataUnsafe?.user,
             role: 'CLIENT',
         };
 
