@@ -12,7 +12,7 @@ function App() {
     }, [])
 
     const onPing = async () => {
-        const user = tg.initDataUnsafe?.user;
+        const user = tg.initData;
 
         if (!user) {
             alert('User not found');
